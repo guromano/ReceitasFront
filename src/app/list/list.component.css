@@ -1,0 +1,132 @@
+.btn-back div{
+    background-color: var(--text);
+    border: none;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+    padding-left: 10px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--bg-dark);
+}
+.btn-back{
+    text-decoration: none;
+}
+.recipe-item{
+    width: 28%;
+    display: inline-block;
+    text-align: center;
+    opacity: 0.8;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: var(--text);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    height: 300px;
+    position: relative;
+}
+.recipe-item .content{
+    display: none;
+    height: 0;
+    top:300px;
+}
+.content{
+    width: 100%;
+    transition: 1s all;
+    background-color: var(--text);
+}
+.recipe-item.active .content{
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+.recipe-name{
+    color: var(--bcontrast);
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-flex;
+    word-wrap: break-word;
+    align-items: center;
+    height: 120px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.recipe-info-item{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.recipe-info-item i{
+    color: var(--bg);
+    font-size: 40px;
+    margin-right: 5px;
+}
+.recipe-info-item .recipe-info-value{
+    color: var(--bg-dark);
+    font-size: 25px;
+}
+.more-info{
+    color: var(--bg);
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    transition: 1s all;
+    z-index: 9999;
+}
+.more-info:hover{
+    cursor: pointer;
+    color:var(--bg-dark);
+}
+.ingredients-content{
+    text-align: left;
+}
+.more-info i{
+    font-size: 40px;
+}
+.tabs div{
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--bg);
+    transition: 1s all;
+}
+.tabs div:hover{
+    color: var(--bg-dark);
+    cursor: pointer;
+}
+.tabs div.active{
+    color: var(--contrast);
+    text-decoration: underline;
+}
+.tab-content.active{
+    display: block;
+}
+.tab-content{
+    margin-top: 20px;
+    height: 150px;
+    display: none;
+    overflow: auto;
+}
+.preparemethod-content{
+    text-align: left;
+    padding: 20px;
+}
+@media (max-width: 767px) {
+    .recipe-item{
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .recipe-item{
+        width: 40%;
+    }
+}

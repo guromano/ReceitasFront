@@ -1,0 +1,65 @@
+<a class="btn-back" href="/"><div>Voltar</div></a>
+<div class="recipes">
+  <div *ngIf="loading" class="loading">
+    Carregando...
+  </div>
+  <div *ngIf="!(loading && error)" class="recipes">
+      <div *ngFor="let recipe of recipes" class="recipe-item">
+        <div class="recipe-name">{{recipe.name}}</div>
+        <div class="recipe-info">
+          <div class="recipe-info-item">
+            <i class="material-icons">
+              people
+            </i>
+            <span class="recipe-info-value">
+              {{recipe.portion}}
+            </span>
+          </div>
+          <div class="recipe-info-item">
+            <i class="material-icons">
+              fitness_center
+            </i>
+            <span class="recipe-info-value">
+              {{recipe.calories}}
+            </span>
+          </div>     
+          <div class="recipe-info-item">
+            <i class="material-icons">
+              local_grocery_store
+            </i>
+            <span class="recipe-info-value">
+              {{recipe.ingredients.length}}
+            </span>
+          </div>         
+        </div>
+        <div class="more-info">
+          <i class="material-icons" (click)="MoreInfoBox($event)">
+              information
+          </i>
+        </div>
+        <div class="content">
+          <div class="tabs">
+            <div class="ingredients active" (click)="TabChange($event)">
+              Ingredientes
+            </div>
+            <div class="preparemethod" (click)="TabChange($event)">
+              Modo de preparo
+            </div>
+          </div>
+          <div class="ingredients-content tab-content active">
+            <ul>
+              <li *ngFor="let ingredient of recipe.ingredients">
+                {{ingredient.name}}
+              </li>
+            </ul>
+          </div>
+          <div class="preparemethod-content tab-content">
+            {{recipe.prepareMethod}}
+          </div>
+        </div>
+      </div>
+  </div>
+  <div *ngIf="error" class="error">
+    Algo deu errado.
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<a class="btn-back" href="/"><div>Voltar</div></a>
+<div class="form">
+  <h1>Nova Receita</h1>
+  <div class="input">
+    <p>Nome</p>
+    <input type="text" [(ngModel)]="recipe.name">
+  </div>
+  <div class="input">
+    <p>Porção</p>
+    <input type="number" [(ngModel)]="recipe.portion">
+  </div>
+  <div class="input">
+    <p>Calorias</p>
+    <input type="number" [(ngModel)]="recipe.calories">
+  </div>
+  <div class="item-input">
+      <p>Ingredientes</p>
+    <input type="text" [(ngModel)]="formIngredientName"><button class="bt-add" (click)="AddIngredient()">Adicionar</button>
+    <div class="ingredients">
+        <div *ngFor="let ingredient of recipe.ingredients" class="choosed-ingredient">
+          <button (click)="RemoveIngredient(ingredient.name)">X</button>{{ingredient.name}}
+        </div>
+    </div>
+  </div>
+  <div class="input">
+      <p>Modo de preparo</p>
+      <textarea [(ngModel)]="recipe.prepareMethod"></textarea>
+  </div>
+  <br>
+  <button id="create-button" class="create" (click)="CreateRecipe()"></button>
+</div>

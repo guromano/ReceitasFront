@@ -1,0 +1,105 @@
+.form{
+    padding-left: 100px;
+}
+.input{
+    text-align: left;
+    display: inline-block;
+    width: 20%;
+    margin-right: 13%;
+}
+.item-input{
+   margin-top:20px;
+   margin-bottom: 20px;
+}
+.item-input p{
+    text-align: left;
+}
+.item-input input{
+    width: 30%;
+}
+.igredients{
+    min-height: 50px;
+    margin-top: 10px;
+}
+
+.bt-add{
+    background-color: var(--text);
+    border: 1px solid var(--text);
+    margin-left:-10px; 
+    width: 15%;
+    top: -4px;
+    position: relative;
+    border-radius:0px 10px 10px 0px;
+    height: 38px;
+    cursor: pointer;
+    color:var(--bg-dark);
+}
+h1{
+    font-size: 30px;    
+}
+.choosed-ingredient{
+    background-color: var(--text);
+    color: var(--bg-dark);
+    display: inline-block; 
+    padding: 5px;   
+    margin: 5px;
+    border-radius: 20px;
+}
+.choosed-ingredient button{
+    background-color: rgba(255,255,255,0);
+    border:none;
+    cursor: pointer;
+    color: var(--bg-dark);
+}
+.create{
+    background-color: var(--text);
+    border: none;
+    width: 150px;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--bg-dark);
+    transition: 1s all;
+}
+.create::after{
+    content: "Criar";
+}
+.create.loading::after{
+    content: "Carregando";
+    background-color: var(--sub-text);
+}
+.btn-back div{
+    background-color: var(--text);
+    border: none;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    width: 50px;
+    padding-left: 10px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--bg-dark);
+}
+.btn-back{
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .input{
+    width: 100%;
+  }
+  .form{
+    padding-left: 0px;
+  }
+  .item-input input{
+    width: 70%;
+  }
+  .bt-add{
+    width: 25%;
+  }
+}

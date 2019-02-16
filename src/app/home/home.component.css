@@ -1,0 +1,32 @@
+.home{
+    width: 100%;
+    text-align: center;
+}
+.menu-item{
+    text-decoration: none;
+}
+.menu-item div{
+    font-size: 25px;
+    width: 200px;
+    height: 80px;
+    border-radius: 35px;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+    padding-left: 20px;
+    position: relative;
+    margin: 50px;
+    color: var(--text);
+    border: 3px solid var(--text);
+    transition: 1s all;
+}
+.menu-item div:hover{
+    border: 3px dashed var(--text);
+}
+.menu-item i{
+    font-size: 50px;
+    position: absolute;
+    right: 10px;
+}

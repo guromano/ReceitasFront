@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlRecipeApi: "http://localhost:5000/v1/"
 };
